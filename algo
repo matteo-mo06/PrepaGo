@@ -1,0 +1,83 @@
+
+
+Algo : Exo3
+Variable : départ, i : entiers
+DEBUT
+    SAISIR départ
+    i <- 1
+    TANT QUE i <= 10 FAIRE
+        AFFICHER départ + i
+        i <- i + 1
+    FTQ
+FIN
+
+Variable : départ, i : entiers
+DEBUT
+    SAISIR départ
+    i <- départ +1
+    TANT QUE i <= départ + 10 FAIRE
+        AFFICHER i
+        i <- i + 1
+    FTQ
+FIN
+
+Algo : Exo4
+Variable : départ, i : entiers
+DEBUT
+    SAISIR départ
+    POUR i de 1 à 10 FAIRE
+        AFFICHER départ + i
+    FIN POUR
+FIN
+
+Algo : Exo4 bis
+Variable : départ, i : entiers
+DEBUT
+    SAISIR départ
+    POUR i de départ + 1 à  départ + 10 FAIRE
+        AFFICHER i
+    FIN POUR
+FIN
+
+
+Algo : exo5 
+Variable n, i : entier
+DEBUT
+    AFFICHER "vous voulez quelle table de multiplication ? "
+    SAISIR n 
+    AFFICHER "C'est partchy "
+
+    POUR i de 1 à 10 FAIRE 
+        AFFICHE n & " x " & i & " = " & (n * i)
+    FP 
+FIN
+
+
+
+Algo : exo5 mais "différent"
+Variable n, i, res : entier
+DEBUT
+    AFFICHER "vous voulez quelle table de multiplication ? "
+    SAISIR n 
+    AFFICHER "C'est partchy "
+
+    res <- 0
+    POUR i de 1 à 10 FAIRE 
+        res <- n + res 
+        AFFICHER n & " x " & i & " = " & res
+    FP 
+FIN
+
+
+Algo : exo 5 mais surprise :
+
+Variable 
+    i, j : entiers 
+DEBUT
+    POUR i de 1 à 10 FAIRE 
+        AFFICHER "table de " & i
+        POUR j de 1 à 10 FAIRE 
+            AFFICHER i & " x " & j & " = " & i*j
+        FP
+    FP
+FIN
