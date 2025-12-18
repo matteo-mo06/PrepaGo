@@ -1,8 +1,8 @@
 package app
 
 import (
+	"PrepaGo/db"
 	"encoding/json"
-	"exam_api/db"
 	"fmt"
 	"net/http"
 	"strconv"

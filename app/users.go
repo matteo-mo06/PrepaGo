@@ -1,8 +1,8 @@
 package app
 
 import (
-	"2025A3/db"
-	"2025A3/models"
+	"PrepaGo/db"
+	"PrepaGo/models"
 	"encoding/json"
 	"fmt"
 	"net/http"

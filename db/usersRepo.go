@@ -1,7 +1,7 @@
 package db
 
 import (
-	"2025A3/models"
+	"PrepaGo/models"
 	"database/sql"
 	"fmt"
 )

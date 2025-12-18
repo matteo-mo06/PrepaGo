@@ -1,8 +1,8 @@
 package db
 
 import (
+	"PrepaGo/models"
 	"database/sql"
-	"exam_api/models"
 	"fmt"
 )
 

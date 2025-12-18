@@ -1,7 +1,7 @@
 package db
 
 import (
-	"exam_api/models"
+	"PrepaGo/models"
 	"fmt"
 )
 
