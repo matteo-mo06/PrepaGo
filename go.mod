@@ -1,4 +1,4 @@
-module 2025A3
+module PrepaGo
 
 go 1.24.6
 

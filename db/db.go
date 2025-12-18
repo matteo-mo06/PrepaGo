@@ -4,35 +4,29 @@ import (
 	"database/sql"
 	"fmt"
 
-	_ "github.com/lib/pq" // pour postgres
-	//_ "github.com/go-sql-driver/mysql" pour mysql
-	// pour installer le driver
-	// >go get github.com/.... (selon le package de driver à installer)
+	_ "github.com/go-sql-driver/mysql"
 )
 
 const (
-	driver   = "postgres"
+	driver   = "mysql"
 	host     = "localhost"
-	port     = 5432
-	user     = "postgres"
-	password = "root"
-	dbname   = "godb"
+	port     = 3306
+	user     = "root"
+	password = "nyat@.pqsdfgLCL0"
+	dbname   = "exam_api"
 )
 
 var Conn *sql.DB
 
 func NewDB() *sql.DB {
-	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
-		host, port, user, password, dbname)
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s",
+		user, password, host, port, dbname)
 
-	// pour mysql
-	//	var msqlInfo = fmt.Sprintf("%s:%s@tcp(%s:%d)/%s",
-	//	 			user, password,host, port, dbname)
-
-	conn, err := sql.Open(driver, psqlInfo)
+	conn, err := sql.Open(driver, dsn)
 	if err != nil {
 		panic(err.Error())
 	}
-	fmt.Println("connected to database !")
+
+	fmt.Println("Connected to database!")
 	return conn
 }
