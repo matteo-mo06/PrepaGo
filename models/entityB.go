@@ -1,9 +1,9 @@
 package models
 
 type EntityB struct {
-	Id            int    `json:"id"`
-	OwnerName     string `json:"owner_name"`
-	OwnerPassword string `json:"owner_password"`
-	IsPremium     bool   `json:"is_premium"`
-	CreationYear  int    `json:"creation_year"`
+	Id           int    `json:"id"`
+	Name         string `json:"name"`
+	MaxVarcharEx string `json:"max_varchar_ex"`
+	BoolEx       bool   `json:"bool_ex"`
+	IntEx        int    `json:"int_ex"`
 }

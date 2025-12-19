@@ -29,8 +29,8 @@ func main() {
 	http.HandleFunc("DELETE /entity-b/{entityBId}/entity-a/{entityAId}", app.RemoveEntityAFromEntityB)
 	http.HandleFunc("GET /entity-b/{entityBId}/entity-a/{$}", app.GetAllEntityAForEntityB)
 
-	fmt.Println("Server running on http://localhost:8080")
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("Server running on http://localhost:8090")
+	http.ListenAndServe(":8090", nil)
 }
 
 func healthCheck(w http.ResponseWriter, r *http.Request) {
