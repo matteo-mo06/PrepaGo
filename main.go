@@ -29,6 +29,8 @@ func main() {
 	http.HandleFunc("DELETE /entity-b/{entityBId}/entity-a/{entityAId}", app.RemoveEntityAFromEntityB)
 	http.HandleFunc("GET /entity-b/{entityBId}/entity-a/{$}", app.GetAllEntityAForEntityB)
 
+	http.HandleFunc("POST /login/{$}", app.Login)
+
 	fmt.Println("Server running on http://localhost:8090")
 	http.ListenAndServe(":8090", nil)
 }

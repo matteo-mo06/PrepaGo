@@ -11,7 +11,7 @@ func GetAllUsers() ([]models.User, error) {
 
 	var rows *sql.Rows
 
-	rows, err := Conn.Query("SELECT id, username, password, credit FROM esgi.users")
+	rows, err := Conn.Query("SELECT id, username, password, credit FROM exam_api")
 	if err != nil {
 		return nil, fmt.Errorf("db getAllUsers : %v", err.Error())
 	}
