@@ -39,7 +39,7 @@ func GetAllUsersByName(name string) ([]models.User, error) {
 
 	var rows *sql.Rows
 
-	rows, err := Conn.Query("SELECT id, username, password, credit FROM esgi.users WHERE username = $1", name)
+	rows, err := Conn.Query("SELECT id, username, password, credit FROM esgi.users WHERE username = ?", name)
 	if err != nil {
 		return nil, fmt.Errorf("db getAllUsersByName : %v", err.Error())
 	}
@@ -63,7 +63,7 @@ func GetAllUsersByName(name string) ([]models.User, error) {
 }
 
 func CreateUser(user models.User) error {
-	_, err := Conn.Exec("INSERT INTO esgi.users (username, password, credit) VALUES ($1, $2, $3)",
+	_, err := Conn.Exec("INSERT INTO esgi.users (username, password, credit) VALUES (?, ?, ?)",
 		user.Username, user.Password, user.Credit)
 	if err != nil {
 		return fmt.Errorf("db createUser : %v", err.Error())
